@@ -4,7 +4,7 @@ public class Main {
 	public static int n;
 	public static int[] prime = new int[] { 0, 1, 1, 1, 0, 1, 0, 1, 0, 0, 0,
 			1, 0, 1, 0, 0, 0, 1, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 1, 0,
-			0, 0, 0, 0, 1, 0, 0 };;
+			0, 0, 0, 0, 1, 0, 0 };
 	public static boolean[] used;
 	public static int[] result;
 
