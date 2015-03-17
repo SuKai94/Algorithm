@@ -1,4 +1,4 @@
-Repository For Data Structure && Algorithm
+Data Structure && Algorithm
 ===
 
 ### Directory
