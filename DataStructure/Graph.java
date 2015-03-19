@@ -100,6 +100,7 @@ public class Graph {
             }
         }
         theStack = new StackX();
+        theQueue = new Queue();
     }
 
     public void addVertex(char lab) {
@@ -165,5 +166,29 @@ public class Graph {
             }
         }
         return -1;
+    }
+    
+    /**
+     * 最小生成树算法，DFS算法走过整个图的路径必定是最小生成树
+     */
+    public void mst() {
+        vertexList[0].wasVisited = false;
+        theStack.push(0);
+        while (!theStack.isEmpty()) {
+            int currentVertex = theStack.peek();
+            int v = getAdjUnvisitedVertex(currentVertex);
+            if (v == -1) {
+                theStack.pop();
+            } else {
+                vertexList[v].wasVisited = true;
+                theStack.push(v);
+                displayVertex(currentVertex);
+                displayVertex(v);
+                System.out.print(" ");
+            }
+        }
+        for (int j = 0; j < nVerts; j++) {
+            vertexList[j].wasVisited = false;
+        }
     }
 }

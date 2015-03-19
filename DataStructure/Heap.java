@@ -70,7 +70,7 @@ public class Heap {
         while (index < currentSize / 2) {
             int leftChild = 2 * index + 1;
             int rightChild = leftChild + 1;
-            if (rightChild > currentSize && heapArray[leftChild].getKey() < heapArray[rightChild].getKey()) {
+            if (rightChild < currentSize && heapArray[leftChild].getKey() < heapArray[rightChild].getKey()) {
                 largerChild = rightChild;
             } else {
                 largerChild = leftChild;
