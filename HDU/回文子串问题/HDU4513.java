@@ -37,7 +37,7 @@ public class Main {
             for (int i=1; i<k; i++) {
                 p[i] = mx>i ? Math.min(p[2*id-i], mx-i) : 1;
                 // 注意这里的循环条件, 比普通的manacher多一个条件: str[i-p[i]]<=str[i-p[i]+2]
-                while (str[i+p[i]] == str[i-p[i]] && str[i-p[i]]<=str[i-p[i]+1]) {
+                while (str[i+p[i]] == str[i-p[i]] && str[i-p[i]]<=str[i-p[i]+2]) {
                     p[i]++;
                 }
                 if (i+p[i] > mx) {
