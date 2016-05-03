@@ -1,0 +1,1 @@
+SELECT Name FROM test.Employee e1 WHERE e1.Salary > (SELECT Salary FROM test.Employee e2 WHERE e2.Id = e1.ManagerId);
