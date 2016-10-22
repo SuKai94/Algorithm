@@ -15,6 +15,7 @@ public class Solution {
 
     public int find(int p) {
         while (p != id[p]) {
+            id[p] = id[id[p]];
             p = id[p];
         }
         return p;
@@ -37,6 +38,6 @@ public class Solution {
     }
 
     public static void main(String[] args) {
-        
+
     }
 }
